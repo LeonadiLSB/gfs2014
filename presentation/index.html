@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>Wasserstoffautos</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<link rel="stylesheet" href="css/reveal.min.css">
+		<link rel="stylesheet" href="css/theme/default.css" id="theme">
+
+		<!-- For syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- If the query includes 'print-pdf', use the PDF print sheet -->
+		<script>
+			document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+      
+      <style>
+        #back {
+          position: absolute;
+          top:15px;
+          left:15px;
+          color:white;
+          font-family:sans-serif;
+          font-size:54px;
+          z-index:1000000;
+        }
+      </style>
+	</head>
+
+	<body>
+        <a href="../index.html" id="back">&laquo;</a>
+		<div class="reveal">
+            <div class="slides">
+                <section>
+                    <h1>Wasserstoffautos</h1>
+                    <div>
+                        <img src="images/wasserstoff.jpg" style="width: 342.16042780748666px; height: 344px; max-height: none; max-width: none;">
+                    </div>
+                    <div>
+                        Leon Bentrup
+                    </div>
+                    <aside class="notes" data-markdown>
+                        
+                    </aside>
+                </section>
+            
+                <section>
+                    <h2>Agenda</h2>
+                    <div>
+                        <ol>
+                            <li>Wasserstoff</li>
+            
+                            <li>Grundbegriff (Wasserstoff)Auto</li>
+            
+                            <li>Verbrennungsmotor</li>
+            
+                            <li>Brennstoffzelle</li>
+            
+                            <li>Kritik</li>
+            
+                            <li>Zukünftige Entwicklungen</li>
+                        </ol>
+                    </div>
+                    <br>
+                    <div>
+                        <blockquote cite="Jules Verne">
+                            "Das Wasser ist die Kohle der Zukunft"<br>
+                        </blockquote>
+            
+                        <p style="font-size: 22px; font-style: italic; font-variant: normal;">Jules Verne, Die geheimnisvolle Insel, 1870</p>
+                    </div>
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 180, 50, 140, 0.6 )">
+                        <h2>Wasserstoff</h2>
+            
+                        <div style="text-align: center;">
+                            <table style="display: inline-block;">
+                                <thead>
+                                    <tr>
+                                        <th>Steckbrief Wasserstoff</th>
+                                    </tr>
+                                </thead>
+            
+                                <tbody>
+                                    <tr>
+                                        <td>Element</td>
+            
+                                        <td>H</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>Summenformel</td>
+            
+                                        <td>H<sub>2</sub></td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>Heizwert<br>
+                                        (700 bar)</td>
+            
+                                        <td>33,3 kWh/m³ (Diesel: 12 kWh/m³)<br>
+                                        1,85 kWh/m³ (Diesel: 9,7 kWh/m³)</td>
+                                    </tr>
+            
+                                    <tr>
+                                        <td>Siedetemperatur</td>
+            
+                                        <td>-252 °C</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 180, 50, 140, 0.6 )">
+                        <h2>Energiedichte</h2>
+            
+                        <div>
+                            30 kWh
+                        </div>
+            
+                        <div>
+                            <figure style="display: inline-block; margin-right: 20px;">
+                                <img src=
+                                "images/Wasserstoff.png"
+                                style=
+                                "width: 45px; height: 100%; max-height: none; max-width: none;">
+            
+                                <figcaption>
+                                    Wasserstoff
+                                </figcaption>
+            
+                                <figcaption>
+                                    10 000 l
+                                </figcaption>
+                            </figure>
+            
+                            <figure style="display: inline-block; margin-right: 20px;">
+                                <img src=
+                                "images/700bar.png"
+                                style=
+                                "width: 45px; height: 100%; max-height: none; max-width: none;">
+            
+                                <figcaption>
+                                    700 bar
+                                </figcaption>
+            
+                                <figcaption>
+                                    16 l
+                                </figcaption>
+                            </figure>
+            
+                            <figure style="display: inline-block; margin-right: 20px;">
+                                <img src=
+                                "images/fluessig.png"
+                                style=
+                                "width: 45px; height: 100%; max-height: none; max-width: none;">
+            
+                                <figcaption>
+                                    flüssig
+                                </figcaption>
+            
+                                <figcaption>
+                                    13 l
+                                </figcaption>
+                            </figure>
+            
+                            <figure style="display: inline-block;">
+                                <img src=
+                                "images/Diesel.png"
+                                style=
+                                "width: 45px; height: 100%; max-height: none; max-width: none;">
+            
+                                <figcaption>
+                                    Diesel
+                                </figcaption>
+            
+                                <figcaption>
+                                    3 l
+                                </figcaption>
+                            </figure>
+                        </div>
+                        <aside class="notes" data-markdown>
+                            * Normal: 10 000l
+                            * Druck: 16l
+                            * Flüssig: 13l
+                            * Diesel: 3l
+                        </aside>
+                    </section>
+            
+                    <section data-background-color="rgba( 180, 50, 140, 0.6 )">
+                        <h2>Energiedichte</h2>
+            
+                        <div>
+                            Lohnt sich Wasserstoff dann überhaupt?
+                        </div>
+            
+                        <div>
+                            <br>
+                        </div>
+            
+                        <h3>Ja</h3>
+            
+                        <div>
+                            Wasserstoffantriebe haben einen hohen Wirkungsgrad!
+                        </div>
+            
+                        <div>
+                            <br>
+                        </div>
+            
+                        <div>
+                            <ul>
+                                <li>Dieselmotor: 35-40 %</li>
+            
+                                <li>Verbrennungsmotor: 45 %</li>
+            
+                                <li>Brennstoffzelle: 50-60 %</li>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 180, 50, 140, 0.6 )">
+                        <h2>Wasserstoffgewinnung</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Partielle Oxidation</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><span>Verbrennung &nbsp;von schweren Kohlenwasserstoffen</span></li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li><span>Heizöl</span></li>
+            
+                                                <li><span>Kohle</span></li>
+                                            </ul>
+                                        </li>
+            							<li>Mit geringer Sauerstoffzufuhr</li>
+            							<li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li>Unvollständige Verbrennung</li>
+                                            </ul>
+                                        </li>
+                                        <li>Wasserstoffhaltiges Gasgemisch</li>
+            							<li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li>Muss gefilter werden</li>
+                                            </ul>
+                                        </li>
+                                        <li>Problem: <i>Kohlenmonoxid</i></li>
+                                        <li>Nicht regeneartiv (Erdöl)</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <img src="images/828f4e7188.jpg">
+                        </div>
+                    </section>
+                    <section data-background-color="rgba( 180, 50, 140, 0.6 )">
+                        <h2>Wasserstoffgewinnung</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Elektrolyse von Wasser</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><span>Trennung von Wasser</span></li>
+                                        <li style="list-style: none; display: inline">
+                                            <ul>
+                                                <li>Über Elektroden Strom zuführen</li>
+                                            </ul>
+                                        </li>
+            							<li>An der Anode entsteht Sauerstoff</li>
+            							<li>An der Kathode entsteht Wasserstoff</li>
+            							<li>Wirkungsgrad: 70%</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                                
+                        </div>
+                        <img src="images/624px-Electrolysis.svg.png" style="width: auto; height: 250px;">
+                    </section>
+                </section>
+            
+                <section data-background-color="rgba( 22, 213, 75, 0.6 )">
+                    <h2>Warum Wasserstoff?</h2>
+            
+                    <div>
+                        <ul>
+                            <li>Ungiftig</li>
+            
+                            <li>Keine Umweltschädlichen Abgase</li>
+            
+                            <li style="list-style: none; display: inline">
+                                <ul>
+                                    <li>Wasser</li>
+                                </ul>
+                            </li>
+            
+                            <li>Kann nahezu unbegrenzt hergestellt werden</li>
+            
+                            <li style="list-style: none; display: inline">
+                                <ul>
+                                    <li>Erneuerbar</li>
+                                </ul>
+                            </li>
+            
+                            <li>Schneller und unkomplizierter Tankvorgang</li>
+                          
+                            <li>In Crashtests sogar sicherer als normales Benzin</li>
+                        </ul>
+                    </div>
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Was ist ein <span style="color: grey">Wasserstoff</span>auto?</h2>
+            
+                        <div>
+                            <ul>
+                                <li class="" data-fragment-index="0">Auto</li>
+            
+                                <li class="" data-fragment-index="1">
+                                <span>Umwandlung von Energie</span></li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li class="" data-fragment-index="2">
+                                        Wasserstoff: Chemische Energie</li>
+            
+                                        <li class="" data-fragment-index="2">
+                                        Fahren: Kinetische Energie</li>
+                                    </ul>
+                                </li>
+            
+                                <li class="" data-fragment-index="3">Beliebig viele
+                                Zwischenformen</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li class="" data-fragment-index="4">
+                                        Elektrische Energie</li>
+            
+                                        <li class="" data-fragment-index="4">
+                                        Thermische Energie ("Wärme")</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                        <aside class="notes" data-markdown>
+                            
+                        </aside>
+                    </section>
+            
+                    <section data-background-color="rgba( 22, 152, 213, 0.6 )">
+                        <h2>Lagerung im Auto</h2>
+            
+                        <div>
+                            <div style=
+                            "font-size: 36px; font-style: normal; font-variant: normal;">
+                                <ul>
+                                    <li class="" data-fragment-index="0">Dichte von
+                                    Wasserstoff: 0,00009 kg/m³ (bei 0 °C)</li>
+            
+                                    <li style="list-style: none; display: inline">
+                                        <ul>
+                                            <li class="" data-fragment-index="1">
+                                            Geringe Energiedichte</li>
+                                        </ul>
+                                    </li>
+            
+                                    <li class="" data-fragment-index="2">Dichte
+                                    Flüssig: 71 kg/m³ (bei -252,8 °C)</li>
+            
+                                    <li style="list-style: none; display: inline">
+                                        <ul>
+                                            <li class="" data-fragment-index="3">
+                                            Hohe Energiedichte</li>
+            
+                                            <li class="" data-fragment-index="4">Ständige Kühlung</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div><br>
+            
+                            <h3 class="" data-fragment-index="6" style=
+                            "font-style: normal; font-variant: normal;">LAGERUNG BEI HOHEM
+                            DRUCK (350 BIS 800 BAR)</h3>
+                            <img src="images/185940.jpg" style="height: 270px; width: auto;">
+                            <aside class="notes" data-markdown>
+                                Lagerung bei hohem Druck ist ein **Kompromis** aus beidem.
+                            </aside>
+                        </div>
+                    </section>
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 0, 0, 0, 0.6 )">
+                        <h2>Verbrennungsmotor</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Modifizierter Ottomotor</li>
+            
+                                <li>Einspritzen eines Wasserstoff-Luft-Gemischs</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li><i>Äußere Gemischbildung:</i> Mischen vor
+                                        Einspritzung</li>
+            
+                                        <li><i>Innere Gemischbildung:</i> Mischen erst im
+                                        Zylinder</li>
+                                    </ul>
+                                </li>
+                                <li>Entzünden des Gemischs mit einer Zündkerze</li>
+                            </ul>
+                        </div>
+                        <aside class="notes" data-markdown>
+                            * Umgebaut aus einem normalen Benzinmotor
+                              * Mehrere Zylinder
+                            * Betrieb mit Benzin weiter möglich
+                            
+                        </aside>
+                    </section>
+            
+                    <section data-background-color="rgba( 0, 0, 0, 0.6 )">
+                        <h2>Probleme</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Wasserstoff greift die Bauteile an</li>
+            
+                                <li>Wasserstoff verbrennt unregelmäßig</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Hohe Hitzebelastung der Ventile</li>
+                                    </ul>
+                                </li>
+            
+                                <li>Geringerer Wirkungsgrad als bei Brennstoffzelle</li>
+                            </ul>
+                        </div>
+                        <aside class="notes" data-markdown>
+                            Unregelmäßige Verbrennungen wenn noch Heißer Wasserstoff im Zylinder ist (Frühzündung)
+                            
+                        </aside>
+                    </section>
+            
+                    <section data-background-color="rgba( 0, 0, 0, 0.6 )">
+                        <h2>Verbrennungsmotor</h2>
+            
+                        <div>
+                            <img src=
+                            "images/800px-Motor_Hydrogen_7.JPG"
+                            style=
+                            "width: 646.6666666666666px; height: 485px; max-height: none; max-width: none;"><br>
+                            </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 0, 0, 0, 0.6 )">
+                        <img src=
+                        "images/BMW.png"
+                        style=
+                        "width: 407.66936790923825px; height: 612px; max-height: none; max-width: none;">
+                        <aside class="notes" data-markdown>
+                            * Nur einige Probemodelle an Prominente verteilt
+                            * Entwicklung eingestellt
+                            
+                        </aside>
+                    </section>
+                    
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>Brennstoffzelle</h2>
+            
+                        <div>
+                            <br>
+                        </div>
+            
+                        <div>
+                            <img src=
+                            "images/Brenstoffzellenauto.png"><br>
+                            </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>Brenstoffzelle</h2>
+            
+                        <div><span style="text-align: left;">PEMFC = Proton Exchange
+                        Membrane Fuel Cell</span><br>
+                        <img src=
+                        "images/Brennstoffzelle_funktionsprinzip.png"
+                        style=
+                        "width: 591.5623987034036px; height: 434px; max-height: none; max-width: none;">
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>Brennstoffzelle</h2>
+            
+                        <div>
+                            <ul>
+                                <li class="" data-fragment-index="0">Zwei Bereiche,
+                                getrennt durch eine Elektrolytmembran mit jeweils einer Platinelektrode</li>
+            
+                                <li class="" data-fragment-index="1">Anode:
+                                Reduktion von Wasserstoff</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li class="" data-fragment-index="2">2
+                                        H<sub>2</sub> -&gt; 4 H<sup>+</sup> + 4
+                                        e<sup>-</sup></li>
+                                    </ul>
+                                </li>
+            
+                                <li class="" data-fragment-index="3">Protonen
+                                "passen" durch Elektrolytmembran</li>
+            
+                                <li class="" data-fragment-index="4">Kathode:
+                                Oxidation von Sauerstoff</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li class="" data-fragment-index="5">
+                                        O<sub>2</sub> + 4 H<sup>+</sup> + 4 e<sup>-</sup>
+                                        -&gt; 2 H<sub>2</sub>O</li>
+                                    </ul>
+                                </li>
+            
+                                <li class="" data-fragment-index="6">Reaktion von
+                                Wasser- und Sauerstoffionen zu Wasser</li>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>Brennstoffzelle</h2>
+            
+                        <div>
+                            <img src=
+                            "images/fuel-cell-cars_1.jpg"
+                            style=
+                            "width: 451px; height: 451px; max-height: none; max-width: none;"><br>
+                            </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>AKKU</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Lithium-Ionen-Akku</li>
+                              
+                                <li>Hochleistungskondensator</li>
+            
+                                <li>Schützt Brennstoffzelle vor Verbrauchsschwankungen</li>
+                                
+                                <li>Erhöht maximale Leistung</li>
+            					<li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Kann mehr Energie in kurzer Zeit liefern als Brennstoffzelle</li>
+                                    </ul>
+                                </li>
+                                <li>Kombinieren mit weiteren Energiequellen</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Bremskraftrückgewinnung</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>Motor</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Meistens: Ein Motor mit Getriebe</li>
+            
+                                <li>Alternativ: Mehrere Motoren direkt an der Radnabe</li>
+                            </ul><br>
+                        </div>
+            
+                        <div>
+                            <img src=
+                            "images/i_20110328-090302-944.jpg"
+                            style=
+                            "width: 386.3269846413701px; height: 286.0208333333333px; max-height: none; max-width: none;"><br>
+                            </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <img src=
+                        "images/Honda.png"
+                        style=
+                        "width: 409.00162074554294px; height: 614px; max-height: none; max-width: none;">
+                    </section>
+            
+                    <section data-background-color="rgba( 200, 50, 30, 0.6 )">
+                        <h2>HONDA FCX Clarity</h2>
+            
+                        <div>
+                            <img src=
+                            "images/Honde_FCX_Clarity_Inside.png"
+                            style=
+                            "width: 886.231343283582px; height: 455px; max-height: none; max-width: none;"><br>
+                            </div>
+                    </section>
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 12, 25, 77, 0.6)">
+                        <h2>Kritik</h2>
+                
+                        <div>
+                            <ul>
+                                <li>Wasserstoff ist schwer zu lagern</li>
+                
+                                <li>Wasserstoff ist nur ein Energieträger</li>
+                
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Nur so umweltfreundlich, wie die zur<br>
+                                        Herstellung benutzte Energie</li>
+                                    </ul>
+                                </li>
+                
+                                <li>Wasserstofffahrzeuge sind (noch) sehr teuer</li>
+                
+                                <li>Keine gute Versorgung mit Wasserstoff</li>
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Nur etwa 10 Tankstellen</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <section data-background-color="rgba( 12, 25, 77, 0.6)">
+                        <div>
+                        <img src="images/map.png" ><br>
+                        </div>
+                    </section>
+                </section>
+                
+                <section>
+                    <section data-background-color="rgba( 50, 200, 90, 0.4 )">
+                        <h2>Zukünftige Entwicklungen</h2>
+            
+                        <div>
+                            <ul>
+                                <li>Steigerung der Effizienz</li>
+            
+                                <li style="list-style: none; display: inline">
+                                    <ul>
+                                        <li>Geringerer Verbrauch</li>
+            
+                                        <li>Höhere Reichweiten</li>
+                                    </ul>
+                                </li>
+            
+                                <li>Minimierung von Herstellungskosten</li>
+            
+                                <li>Ausbau des Versorgungsnetzes</li>
+                            </ul>
+                        </div>
+                    </section>
+            
+                    <section data-background-color="rgba( 50, 200, 90, 0.4 )">
+                        <h2>Hat Wasserstoff Zukunft</h2>
+            
+                        <div>
+                            <h3><span>VerbrennungsmotoR</span></h3>
+                        </div>
+            
+                        <div>
+                            <ul>
+                                <li>Geringer Wirkungsgrad</li>
+            
+                                <li>Hohe Materialkosten</li>
+                            </ul><br>
+                        </div>
+            
+                        <p><br></p>
+            
+                        <h3>Brennstoffzelle</h3>
+            
+                        <div>
+                            <ul>
+                                <li>Übergangslösung</li>
+            
+                                <li>Ablösung durch Elektroautos</li>
+                            </ul>
+                        </div>
+                    </section>
+                </section>
+            
+                <section>
+                    <section data-background-color="rgba( 255, 122, 0, 0.6 )">
+                        <h1>Noch Fragen?</h1>
+                    </section>
+            
+                    <section data-background-color="rgba( 255, 122, 0, 0.6 )">
+                        <h2>Weitere Informationen</h2>
+            
+                        <div>
+                            <br>
+                        </div>
+            
+                        <div>
+                            <br>
+                        </div>
+            
+                        <div>
+                            <pre style="font-size: 54px; text-align:center;"><code>gfs2014.leonadi.de</code></pre>
+                        </div>
+                    </section>
+                </section>
+            </div>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.min.js"></script>
+
+		<script>
+
+			// Full list of configuration options available here:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+				transition: Reveal.getQueryHash().transition || 'default', // default/cube/page/concave/zoom/linear/fade/none
+
+				// Parallax scrolling
+				// parallaxBackgroundImage: 'https://s3.amazonaws.com/hakim-static/reveal-js/reveal-parallax-1.jpg',
+				// parallaxBackgroundSize: '2100px 900px',
+
+				// Optional libraries used to extend on reveal.js
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+					{ src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+                    { src: 'socket.io/socket.io.js', async: true },
+                    { src: 'plugin/notes-server/client.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>
